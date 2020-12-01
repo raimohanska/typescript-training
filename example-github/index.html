@@ -9,7 +9,7 @@
         const json = await response.json()       
         return json
     }
-    function h(name, props, children) {
+    function h(name, props, ...children) {
         const element = document.createElement(name)
         Object.entries(props).forEach(([key, value]) => {
             element[key] = value
