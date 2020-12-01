@@ -3,7 +3,7 @@ public class Horse {
     public Horse(String name) {
         this.name = name;
     }
+    public String greet() {
+        return "Hello I'm " + this.name;
+    }
 }
-
-new Horse("Bella").name
-

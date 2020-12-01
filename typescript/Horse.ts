@@ -3,6 +3,9 @@ export class Horse {
     constructor(name: string) {
         this.name = name
     }
+    greet() {
+        return this.name
+    }
 }
 
 new Horse("hepo").name

@@ -1,0 +1,30 @@
+<html>
+    <body></body>
+<script>
+    async function fetchData(category) {
+        const response = await fetch(`https://bad-api-assignment.reaktor.com/products/${category}`)
+        const json = await response.json()       
+        return json
+    }
+    function h(name, children) {
+        const element = document.createElement(name)
+        children.forEach(child => typeof child === "string" 
+            ? element.appendChild(document.createTextNode(child)) 
+            : element.appendChild(child))
+        return element
+    }
+    function productView(category, product) {
+        return h("div", [product.name])
+    }
+    async function main() {
+        const allJackets = await fetchData("jackets")
+        const blackJackets = allJackets
+            .filter(j => j.color.includes("black"))
+            .slice(0, 25)
+        const productElements = blackJackets
+            .map(j => productView("jackets", j))
+        productElements.forEach(el => document.body.appendChild(el))
+    }
+    main()
+</script>
+</html>
