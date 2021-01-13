@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "esModuleInterop": true,
+      "sourceMap": true,
+      "allowJs": true,
+      "target": "ES5",
+      "lib": [
+        "es6",
+        "dom"
+      ],
+      "rootDir": "src",
+      "moduleResolution": "node"
+    }
+}
