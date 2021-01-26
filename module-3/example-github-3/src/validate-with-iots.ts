@@ -1,6 +1,7 @@
 import _ from "lodash"
 import * as t from 'io-ts'
 import * as Either from "fp-ts/lib/Either"
+import { PathReporter } from 'io-ts/PathReporter'
 
 const apiURL = "https://api.github.com/orgs/github/repos?per_page=100"
 
@@ -9,18 +10,15 @@ const GHRepoCodec = t.type({
     url: t.string,
     stargazers_count: t.number,
     fork: t.boolean
-})
+}, "GithubRepo")
 type GithubRepo = t.TypeOf<typeof GHRepoCodec>
-
-const ParentProp = t.type({
-    parent: GHRepoCodec,
-    asdf: t.string        
-})
 
 const GHRepoDetailsCodec = t.intersection([
     GHRepoCodec,
-    ParentProp
-])
+    t.type({
+        parent: GHRepoCodec
+    }, "WithParent")
+], "GithubRepoDetails")
 
 type GithubRepoDetails = t.TypeOf<typeof GHRepoDetailsCodec>
 
@@ -34,7 +32,7 @@ async function fetchJSON<T>(url: string, codec: t.Type<T>): Promise<T> {
     if (Either.isRight(result)) {
         return result.right
     } else {
-        throw Error("parse failed: " + result.left)
+        throw Error(PathReporter.report(result).join("\n"))
     }    
 }
 
