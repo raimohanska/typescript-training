@@ -40,6 +40,8 @@ class ValidationError extends Error {
 const error = new ValidationError("just testing");
 console.log("Works?", (error instanceof ValidationError))
 
+console.log([1,2,3,4].flatMap(x => [x, x]))
+
 async function fetchRepos(): Promise<GithubRepo[]> {
     return fetchJSON<GithubRepo[]>(apiURL, t.array(GHRepoCodec))
 }
