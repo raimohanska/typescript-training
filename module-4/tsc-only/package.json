@@ -1,0 +1,23 @@
+{
+    "name": "vanilla-typescript",
+    "version": "1.0.0",
+    "description": "JavaScript and TypeScript example starter project",
+    "main": "index.html",
+    "scripts": {
+        "watch": "tsc --watch",
+        "server": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "lodash": "^4.17.20"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.165",
+        "npm-run-all": "^4.1.5",
+        "typescript": "^4"
+    },
+    "keywords": [
+        "typescript",
+        "javascript"
+    ]
+}
