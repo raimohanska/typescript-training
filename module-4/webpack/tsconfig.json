@@ -2,7 +2,7 @@
     "compilerOptions": {
       "esModuleInterop": true,
       "strict": true,
-      "module": "es6",
+      "module": "esnext",
       "target": "es6",
       "lib": [
         "es2019",
