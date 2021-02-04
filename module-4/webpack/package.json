@@ -4,10 +4,10 @@
     "description": "JavaScript and TypeScript example starter project",
     "private": true,
     "scripts": {
-        "build": "webpack",
-        "watch": "webpack --watch",
+        "build": "webpack --mode production",
+        "watch": "webpack --watch --mode development",
         "server": "node server.js",
-        "start": "webpack serve"
+        "start": "webpack serve --mode development"
     },
     "dependencies": {
         "@types/lodash": "^4.14.165",

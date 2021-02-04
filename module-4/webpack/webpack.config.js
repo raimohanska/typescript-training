@@ -1,8 +1,6 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
-  devtool: 'inline-source-map',
   devServer: {
     contentBase: ['./src', './dist'],
   },
@@ -24,6 +22,7 @@ module.exports = {
                   "@babel/preset-env",
                   {
                     "targets": "> 0.2% in FI",
+                    modules : false,
                     useBuiltIns: 'usage',
                     corejs: "3.8",
                     debug: true
@@ -41,7 +40,4 @@ module.exports = {
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
-  optimization: {
-    minimize: true
-  }
 };
