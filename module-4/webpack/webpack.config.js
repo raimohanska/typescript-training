@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   devServer: {
@@ -6,7 +7,7 @@ module.exports = {
   },
   entry: './src/index.ts',
   output: {
-    filename: 'main.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -40,4 +41,5 @@ module.exports = {
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
+  plugins: [ new HtmlWebPackPlugin() ]
 };
