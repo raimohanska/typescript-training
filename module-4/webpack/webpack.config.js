@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   devServer: {
-    contentBase: ['./src', './dist'],
+    contentBase: ['./dist'],
   },
   entry: './src/index.ts',
   output: {
