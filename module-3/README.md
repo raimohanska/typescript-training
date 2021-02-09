@@ -1,6 +1,6 @@
 Example code for module 3 of the course.
 
-A TypeScript front end project that uses the [Parcel] bundler.
+A TypeScript front end project that uses the [Parcel](https://parceljs.org/) bundler.
 
 Usage:
 
