@@ -1,0 +1,1 @@
+Example webpack project that uses the `../library-build` library as a dependency.

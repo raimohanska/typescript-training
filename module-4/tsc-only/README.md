@@ -1,0 +1,1 @@
+Building a web application with `tsc` only. Not really successful.
