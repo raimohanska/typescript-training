@@ -1,7 +1,10 @@
 import { sortBy } from "lodash-es"
 import * as t from './my-own-validation'
-import { foo } from "testlib"
+import { foo } from "testlib";
 
+import * as L from "lonna"
+
+L.bus().log()
 foo()
 
 const apiURL = "https://api.github.com/orgs/github/repos?per_page=100"

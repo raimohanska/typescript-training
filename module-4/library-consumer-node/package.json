@@ -1,0 +1,24 @@
+{
+    "name": "node js app",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node .",
+        "start:dev": "tsc-watch --onSuccess \"node .\" --preserveWatchOutput"
+    },
+    "dependencies": {
+        "testlib": "file:../library-build",
+        "tsc-watch": "^4.2.9"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.25",
+        "typescript": "^4"
+    },
+    "keywords": [
+        "typescript",
+        "javascript"
+    ]
+}
