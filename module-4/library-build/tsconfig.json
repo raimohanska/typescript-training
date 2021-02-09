@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "target": "es2019",
+      "lib": [
+        "es2019",
+        "dom"
+      ],
+      "sourceMap": true,
+      "rootDir": "src",
+      "outDir": "dist",
+      "declaration": true
+    }
+}

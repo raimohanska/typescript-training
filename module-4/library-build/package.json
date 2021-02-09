@@ -1,0 +1,16 @@
+{
+    "name": "testlib",
+    "version": "1.0.0",
+    "description": "JavaScript and TypeScript example starter project",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "prepublishOnly": "npm run build"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "typescript": "^4"
+    }
+}
