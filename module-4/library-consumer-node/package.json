@@ -10,6 +10,8 @@
         "start:dev": "tsc-watch --onSuccess \"node .\" --preserveWatchOutput"
     },
     "dependencies": {
+        "@types/lodash": "^4.14.168",
+        "lodash": "^4.17.20",
         "testlib": "file:../library-build",
         "tsc-watch": "^4.2.9"
     },
