@@ -1,0 +1,34 @@
+{
+    "name": "vanilla-typescript",
+    "version": "1.0.0",
+    "description": "JavaScript and TypeScript example starter project",
+    "private": true,
+    "scripts": {
+        "start": "snowpack dev",
+        "build": "snowpack build",
+        "watch": "snowpack build --watch",
+        "server": "node server.js",
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write ."
+    },
+    "dependencies": {
+        "@types/lodash": "^4.14.165",
+        "core-js": "^3.8.3",
+        "express": "^4.17.1",
+        "lodash": "^4.17.20",
+        "lodash-es": "^4.17.20"
+    },
+    "devDependencies": {
+        "@types/lodash-es": "^4.14.165",
+        "babel-loader": "^8.2.2",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.2.1",
+        "snowpack": "^3.0.11",
+        "ts-loader": "^8.0.14",
+        "typescript": "^4"
+    },
+    "keywords": [
+        "typescript",
+        "javascript"
+    ]
+}
