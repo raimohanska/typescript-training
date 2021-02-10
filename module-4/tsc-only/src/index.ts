@@ -1,4 +1,4 @@
-import * as t from './my-own-validation'
+import * as t from './my-own-validation.js'
 
 const apiURL = "https://api.github.com/orgs/github/repos?per_page=100"
 
