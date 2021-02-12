@@ -35,5 +35,6 @@
     "keywords": [
         "typescript",
         "javascript"
-    ]
+    ],
+    "browserslist": "> 0.2% in FI"
 }
